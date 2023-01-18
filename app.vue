@@ -8,7 +8,7 @@
         <div class="grid grid-cols-12 mx-auto sm:px-6 lg:max-w-7xl lg:px-8">
           <div class="md:block xs-col-span-1 xl:col-span-2">
             <div class="sticky top-0">
-              <SidebarLeft />
+              <SidebarLeftLeft />
             </div>
           </div>
         </div>

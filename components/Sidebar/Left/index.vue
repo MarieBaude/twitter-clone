@@ -11,7 +11,9 @@
         </div>
     </div>
 
-    <HomeIcon />
+    <SidebarLeftTab>
+        <HomeIcon />
+    </SidebarLeftTab>
 
 </template>
 
