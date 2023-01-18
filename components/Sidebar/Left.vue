@@ -1,6 +1,8 @@
 <template>
   <div>
-    left sidebar
+    <div class="w-8 h-8">
+        <LogoTwitter />
+    </div>
   </div>
 </template>
 
