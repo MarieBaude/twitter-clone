@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
     const { username, email, password, repeatPassword, name } = body
 
     if (!username || !email || !password || !repeatPassword || !name) {
-        return sendError()
+        return sendError(event, createError({ statusCode: 400, statusMessage: 'Invalid params' }))
     }
 
     return {
