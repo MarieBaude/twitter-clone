@@ -30,6 +30,7 @@
 
 <script setup>
 import { SearchIcon } from '@heroicons/vue/outline';
+
 const whatsHappeningItems = ref([
     {
         title: '#SpaceX',
@@ -44,4 +45,23 @@ const whatsHappeningItems = ref([
         count: '1.8k Tweets'
     }
 ]);
+
+const whoToFollowItems = ref([
+    {
+        name: 'Joe Biden',
+        handle: '@JoeBiden',
+        image: 'https://picsum.photos/200/200'
+    },
+    {
+        name: 'Joe Biden',
+        handle: '@JoeBiden',
+        image: 'https://picsum.photos/200/200'
+    },
+    {
+        name: 'Joe Biden',
+        handle: '@JoeBiden',
+        image: 'https://picsum.photos/200/200'
+    }
+]);
+
 </script>
