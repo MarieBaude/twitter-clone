@@ -10,7 +10,6 @@
         </div>
 
         <div class="mt-2 space-y-8">
-            
             <SidebarLeftTab active>
                 <template v-slot:icon>
                     <HomeIcon />
@@ -26,6 +25,15 @@
                 </template>
                 <template v-slot:name>
                     Explore
+                </template>
+            </SidebarLeftTab>
+
+            <SidebarLeftTab>
+                <template v-slot:icon>
+                    <BellIcon />
+                </template>
+                <template v-slot:name>
+                    Notifications
                 </template>
             </SidebarLeftTab>
 
@@ -73,15 +81,13 @@
                     More
                 </template>
             </SidebarLeftTab>
-
         </div>
-
-
     </div>
 </template>
 
 <script setup>
-import { BellIcon, BookmarkIcon, BookOpenIcon, HashtagIcon, HomeIcon, InboxIcon, DocumentTextIcon, UserIcon, DotsCircleHorizontalIcon } from "@heroicons/vue/solid"
+import { HomeIcon } from "@heroicons/vue/solid"
+import { BellIcon, BookmarkIcon, BookOpenIcon, HashtagIcon, InboxIcon, DocumentTextIcon, UserIcon, DotsCircleHorizontalIcon } from "@heroicons/vue/outline"
 
 const { defaultTransition } = useTailwindConfig();
 </script>
