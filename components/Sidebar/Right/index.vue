@@ -15,7 +15,10 @@
 
         <!-- Preview Card : What's happening -->
         <SidebarRightPreviewCard title="What's happening">
-            
+            <SidebarRightPreviewCardItem v-for="whatsHappening in whatsHappeningItems">
+                <h2>{{ whatsHappening.title }}</h2>
+                <p>{{ whatsHappening.count }}</p>
+            </SidebarRightPreviewCardItem>
         </SidebarRightPreviewCard>
 
         <!-- Preview Card : Who to follow -->
@@ -27,4 +30,18 @@
 
 <script setup>
 import { SearchIcon } from '@heroicons/vue/outline';
+const whatsHappeningItems = ref([
+    {
+        title: '#SpaceX',
+        count: '18.8k Tweets'
+    },
+    {
+        title: '#CodingIsFun',
+        count: '8.8k Tweets'
+    },
+    {
+        title: '#artforall',
+        count: '1.8k Tweets'
+    }
+]);
 </script>
