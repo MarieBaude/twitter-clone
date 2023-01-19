@@ -12,6 +12,7 @@
     "nuxt": "^3.0.0"
   },
   "dependencies": {
-    "@heroicons/vue": "^1.0.6"
+    "@heroicons/vue": "^1.0.6",
+    "prisma": "^4.9.0"
   }
 }
