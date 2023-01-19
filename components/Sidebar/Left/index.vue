@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-    import { HomeIcon } from '@heroicons/vue/solid'
+    //import { HomeIcon } from '@heroicons/vue/solid'
 
     const { defaultTransition } = useTailwindConfig();
 </script>
