@@ -1,5 +1,6 @@
 <template>
     <div clas="flex flex-col">
+        
         <!-- Search bar -->
         <div class="relative m-2">
             <div class="absolute flex items-center h-full pl-4 text-gray-600 cursor-pointer">
@@ -11,6 +12,16 @@
                 class="flex items-center w-full pl-12 text-sm font-normal text-black bg-gray-200 border border-gray-200 rounded-full shadow dark:text-gray-100 dark:bg-dim-400 dark:border-dim-400 focus:bg-gray-100 dark:focus:bg-dim-900 focus:outline-none focus:border focus:border-blue-200 h-9"
                 placeholder="Search tweet" type="text">
         </div>
+
+        <!-- Preview Card : What's happening -->
+        <SidebarRightPreviewCard title="What's happening">
+            
+        </SidebarRightPreviewCard>
+
+        <!-- Preview Card : Who to follow -->
+        <SidebarRightPreviewCard title="Who to follow">
+
+        </SidebarRightPreviewCard>
     </div>
 </template>
 
