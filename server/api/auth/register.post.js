@@ -26,6 +26,6 @@ export default defineEventHandler(async (event) => {
     const user = await createUser(userData)
 
     return {
-        body: body
+        body: userTransformer(user)
     }
 })
