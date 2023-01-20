@@ -1,3 +1,7 @@
+import { getUserByUsername } from "../../db/users.js"
+import bcrypt from "bcrypt"
+import { userTransformer } from "~~/server/transformers/user.js"
+
 export default defineEventHandler(async (event) => {
     const body = await useBody(event)
 
@@ -19,5 +23,25 @@ export default defineEventHandler(async (event) => {
         }))
     }
 
+    const doesThePasswordMatch = await bcrypt.compare(password, user.password)
 
+    if (!doesThePasswordMatch) {
+        return sendError(event, createError({
+            statusCode: 400,
+            statusMessage: 'Username or password is invalid'
+        }))
+    }
+
+    const { accessToken, refreshToken } = generateTokens(user)
+
+    await createRefreshToken({
+        token: refreshToken,
+        userId: user.id
+    })
+
+    sendRefreshToken(event, refreshToken)
+
+    return {
+        access_token: accessToken, user: userTransformer(user)
+    }
 }) 
