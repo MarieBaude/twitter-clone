@@ -1,6 +1,7 @@
 import { getUserByUsername } from "../../db/users.js"
 import bcrypt from "bcrypt"
 import { userTransformer } from "~~/server/transformers/user.js"
+import { generateTokens } from "~~/server/utils/jwt.js"
 
 export default defineEventHandler(async (event) => {
     const body = await useBody(event)
