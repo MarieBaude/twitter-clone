@@ -9,6 +9,10 @@ export default defineEventHandler(async (event) => {
         return sendError(event, createError({ statusCode: 400, statusMessage: 'Invalid params' }))
     }
 
+    if (password !== repeatPassword) {
+        return sendError(event, createError({ statusCode: 400, statusMessage: 'Passwords do not match' }))
+    }
+
     return {
         body: body
     }
