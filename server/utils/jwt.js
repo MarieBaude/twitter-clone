@@ -9,7 +9,11 @@ const generateAccessToken = (user) => {
 }
 
 const generateRefreshToken = (user) => {
+    const config = useRuntimeConfig()
 
+    return jwt.sign({ userId: user.id }, config.jwtRefreshSecret, {
+        expiresIn: '4h'
+    })
 }
 
 export const generateTokens = (user) => {
