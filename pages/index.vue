@@ -2,7 +2,7 @@
     <div>
         <MainSection title="Home" :loading="loading">
 
-            main content
+            Section main content
 
         </MainSection>
     </div>
