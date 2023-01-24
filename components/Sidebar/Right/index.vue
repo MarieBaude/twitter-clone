@@ -63,18 +63,18 @@ const whatsHappeningItems = ref([
 
 const whoToFollowItems = ref([
     {
-        name: 'Joe Biden',
-        handle: '@JoeBiden',
+        name: 'Machin',
+        handle: '@Machin',
         image: 'https://picsum.photos/200/200'
     },
     {
-        name: 'Joe Biden',
-        handle: '@JoeBiden',
+        name: 'Truc',
+        handle: '@Truc',
         image: 'https://picsum.photos/200/200'
     },
     {
-        name: 'Joe Biden',
-        handle: '@JoeBiden',
+        name: 'Bidule',
+        handle: '@Bidule',
         image: 'https://picsum.photos/200/200'
     }
 ]);
